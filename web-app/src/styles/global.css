@@ -1,0 +1,18 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  h1, h2, h3 {
+    color: #1a202c;
+  }
+  
+  button {
+    transition: all 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
