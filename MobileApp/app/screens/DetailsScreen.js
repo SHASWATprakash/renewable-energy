@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, FlatList, StyleSheet, ActivityIndicator } from "react-native";
-import { fetchProjects } from "../services/apiService";
+import { View, Text, FlatList, ActivityIndicator, StyleSheet } from "react-native";
+import { fetchProjects } from "../services/apiService"; // Import API call function
 
-const ProjectsScreen = () => {
+const DetailsScreen = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -22,7 +22,7 @@ const ProjectsScreen = () => {
     getProjects();
   }, []);
 
-  if (loading) return <ActivityIndicator size="large" color="#0000ff" style={styles.loading} />;
+  if (loading) return <ActivityIndicator size="large" color="#007AFF" style={styles.loading} />;
   if (error) return <Text style={styles.error}>{error}</Text>;
 
   return (
@@ -34,7 +34,7 @@ const ProjectsScreen = () => {
         renderItem={({ item }) => (
           <View style={styles.item}>
             <Text style={styles.key}>{item[0]}</Text>
-            <Text style={styles.value}>{JSON.stringify(item[1])}</Text>
+            <Text style={styles.value}>{JSON.stringify(item[1], null, 2)}</Text>
           </View>
         )}
       />
@@ -52,4 +52,4 @@ const styles = StyleSheet.create({
   error: { color: "red", textAlign: "center" },
 });
 
-export default ProjectsScreen;
+export default DetailsScreen;

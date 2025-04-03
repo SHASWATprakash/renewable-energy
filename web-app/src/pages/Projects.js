@@ -21,6 +21,29 @@ const Projects = () => {
     getProjects();
   }, []);
 
+  const renderValue = (value) => {
+    if (Array.isArray(value)) {
+      return (
+        <ul className="list-disc pl-5">
+          {value.map((item, index) => (
+            <li key={index}>{JSON.stringify(item)}</li>
+          ))}
+        </ul>
+      );
+    } else if (typeof value === "object" && value !== null) {
+      return (
+        <div className="pl-5">
+          {Object.entries(value).map(([subKey, subValue]) => (
+            <div key={subKey}>
+              <strong>{subKey}:</strong> {renderValue(subValue)}
+            </div>
+          ))}
+        </div>
+      );
+    }
+    return JSON.stringify(value);
+  };
+
   if (loading)
     return <p className="text-center text-lg font-semibold text-gray-700">Loading...</p>;
   if (error)
@@ -41,12 +64,10 @@ const Projects = () => {
             {projects.map(([key, value], index) => (
               <tr
                 key={key}
-                className={`border p-4 ${
-                  index % 2 === 0 ? "bg-gray-100" : "bg-white"
-                }`}
+                className={`border p-4 ${index % 2 === 0 ? "bg-gray-100" : "bg-white"}`}
               >
                 <td className="border p-3 font-medium">{key}</td>
-                <td className="border p-3">{JSON.stringify(value)}</td>
+                <td className="border p-3">{renderValue(value)}</td>
               </tr>
             ))}
           </tbody>

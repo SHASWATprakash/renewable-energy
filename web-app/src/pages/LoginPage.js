@@ -19,22 +19,22 @@ const Login = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div style={{ backgroundColor: 'yellow' }} className="flex flex-col items-center justify-center h-screen">
       <h1 className="text-3xl font-bold">Login</h1>
       <input
-        className="border p-2 mt-2"
+        className="border p-2 mt-2 rounded-lg bg-white placeholder-gray-500"
         type="email"
-        placeholder="Email"
+        placeholder="Enter your email"
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
-        className="border p-2 mt-2"
+        className="border p-2 mt-2 rounded-lg bg-white placeholder-gray-500"
         type="password"
-        placeholder="Password"
+        placeholder="Enter your password"
         onChange={(e) => setPassword(e.target.value)}
       />
       <button
-        className="bg-blue-500 text-white px-4 py-2 mt-4"
+        className="bg-blue-500 text-white px-4 py-2 mt-4 rounded-lg"
         onClick={handleLogin}
       >
         Login
