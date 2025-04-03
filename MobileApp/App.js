@@ -1,13 +1,8 @@
-import React from 'react';
-import AppNavigator from './src/navigation/AppNavigator';
-import GlobalProvider from './src/context/GlobalContext';
+import React from "react";
+import AppNavigator from "./src/navigation/AppNavigator";
 
 const App = () => {
-  return (
-    <GlobalProvider>
-      <AppNavigator />
-    </GlobalProvider>
-  );
+  return <AppNavigator />;
 };
 
 export default App;

@@ -12,8 +12,13 @@ export const fetchProjects = async () => {
     return JSON.parse(cache);
   }
 
-  const response = await axios.get(`${API_URL}?api_key=${API_KEY}&lat=40.7128&lon=-74.0060`);
-  localStorage.setItem(CACHE_KEY, JSON.stringify(response.data));
-
-  return response.data;
+  try {
+    const response = await axios.get(`${API_URL}?api_key=${API_KEY}&lat=40.7128&lon=-74.0060`);
+    localStorage.setItem(CACHE_KEY, JSON.stringify(response.data));
+    console.log("Fetched new data from API...", response.data);
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    throw error;
+  }
 };
