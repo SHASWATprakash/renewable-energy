@@ -59,4 +59,6 @@ git clone https://github.com/SHASWATprakash/renewable-energy
 ![Mobile Screenshot3](./assets/MobileApp_Res.png)
 
 
+## 🎥 Demo Video
 
+📌 [Watch Full Demo on Google Drive](https://drive.google.com/drive/folders/16kJ6A2DbGLMGQCB2gQFNrj-VNSjmpgzr?usp=sharing)
