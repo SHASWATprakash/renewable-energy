@@ -47,3 +47,16 @@ This is a full-stack application consisting of:
 git clone https://github.com/SHASWATprakash/renewable-energy
 
 
+## 🌍 Web App Screenshot
+![Web Screenshot1](./assets/WebApp_Login1.png)
+![Web Screenshot2](./assets/WebApp_Login2.png)
+![Web Screenshot3](./assets/WebApp_Res.png)
+
+
+## 📱 Mobile App Screenshot
+![Mobile Screenshot1](./assets/MobileApp_Login1.png)
+![Mobile Screenshot2](./assets/MobileApp_Login2.png)
+![Mobile Screenshot3](./assets/MobileApp_Res.png)
+
+
+
